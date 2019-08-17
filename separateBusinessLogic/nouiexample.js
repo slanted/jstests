@@ -31,7 +31,6 @@ var nuskin = {
 nuskin.init({country:'US', language:'en'});
 
 /*
-nuskin.account.login("usdist", "abc123");
 
 // shopping
 nuskin.shop.addToCart("01003610");
