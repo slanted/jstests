@@ -1,7 +1,7 @@
 var runmodes = {
-    DEV: {name:'Development', baseUrl:'https://dev.nuskin.com', isProduction: false},
-    TEST: {name:'Test', baseUrl:'https://test.nuskin.com', isProduction: false},
-    PROD: {name:'Production', baseUrl:'https://www.nuskin.com', isProduction: true}
+    DEV: {name:'Development', baseUrl:'https://dev.acme.com', isProduction: false},
+    TEST: {name:'Test', baseUrl:'https://test.acme.com', isProduction: false},
+    PROD: {name:'Production', baseUrl:'https://www.acme.com', isProduction: true}
 }
 
 function getConfiguration(options) {
@@ -23,32 +23,30 @@ function init(options) {
     configManager.getConfiguration();
 }
 
-var nuskin = {
+var acme = {
     init: init,
     runmodes: runmodes
 }
 
-nuskin.init({country:'US', language:'en'});
+acme.init({country:'US', language:'en'});
 
 /*
 
 // shopping
-nuskin.shop.addToCart("01003610");
-nuskin.shop.calculateOrder();
-console.log("order total:"+nuskin.shop.order.getTotal());
-nuskin.shop.createOrder();
+acme.shop.addToCart("01003610");
+acme.shop.calculateOrder();
+console.log("order total:"+acme.shop.order.getTotal());
+acme.shop.createOrder();
 
-nuskin.account.logout();
+acme.account.logout();
 
 var newUser = {
-    username:'emoore',
-    password: 'abc123',
     firstName: 'Eric',
     lastName: 'Moore',
     age: 46,
-    type: nuskin.account.DISTRIBUTOR
+    type: acme.account.DISTRIBUTOR
 };
 
-nuskin.account.validateNewUser(newUser);
-nuskin.account.createNewUser(newUser);
+acme.account.validateNewUser(newUser);
+acme.account.createNewUser(newUser);
 */
